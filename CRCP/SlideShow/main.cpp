@@ -39,7 +39,7 @@ void printAscii(int x)
         break;
     case 3:
         cout << "art 4" << endl;
-         cout << "Slideshow ended, returning to beginning." << endl;
+        cout << "Slideshow ended, returning to beginning." << endl;
         break;
     }
 }
