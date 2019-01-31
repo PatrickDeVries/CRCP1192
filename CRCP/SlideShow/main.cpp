@@ -1,23 +1,52 @@
 #include <iostream>
 
 using namespace std;
+void printAscii(int x);
+void printLogo();
+bool promptContinue();
 
-void printOne()
+int main()
 {
-    cout << "art 1" << endl;
+    string trash;
+    printLogo();
+    cout << "Welcome to the slide show! Enter anything to begin." << endl;
+    cin >> trash;
+    bool active = true;
+    int x = 0;
+    while(active)
+    {
+        printAscii(x++%4);
+        active = promptContinue();
+    }
+    cout << "Thank you for viewing :)" << endl;
+    return 0;
 }
-void printTwo()
+
+void printAscii(int x)
 {
-   cout << "art 2" << endl;
+    switch (x)
+    {
+    case 0:
+        cout << "art 1" << endl;
+        break;
+    case 1:
+        cout << "art 2" << endl;
+        break;
+    case 2:
+        cout << "art 3" << endl;
+        break;
+    case 3:
+        cout << "art 4" << endl;
+         cout << "Slideshow ended, returning to beginning." << endl;
+        break;
+    }
 }
-void printThree()
+
+void printLogo()
 {
-    cout << "art 3" << endl;
+    cout << "logo" << endl;
 }
-void printFour()
-{
-    cout << "art 4" << endl;
-}
+
 bool promptContinue()
 {
     while (true)
@@ -32,40 +61,4 @@ bool promptContinue()
         else
             cout << "Invalid entry." << endl;
     }
-}
-
-
-int main()
-{
-    string trash;
-    cout << "Welcome to the slide show! Enter anything to begin." << endl;
-    cin >> trash;
-    bool active = true;
-    bool first = true;
-    while(active)
-    {
-        if (!first)
-            cout << "Slideshow ended, returning to beginning." << endl;
-        first = false;
-
-        printOne();
-        active = promptContinue();
-        if (!active)
-            break;
-
-        printTwo();
-        active = promptContinue();
-        if (!active)
-            break;
-
-        printThree();
-        active = promptContinue();
-        if (!active)
-            break;
-
-        printFour();
-        active = promptContinue();
-    }
-    cout << "Thank you for viewing :)" << endl;
-    return 0;
 }
