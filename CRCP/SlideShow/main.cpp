@@ -3,21 +3,23 @@
 using namespace std;
 void printAscii(int x);
 void printLogo();
-bool promptContinue();
 
 int main()
 {
-    string trash;
+    string temp;
     printLogo();
     cout << "Welcome to the slide show! Enter anything to begin." << endl;
-    cin >> trash;
-    bool active = true;
+    cin >> temp;
+    temp = " ";
     int x = 0;
-    while(active)
+
+    while(temp.compare("x") != 0)
     {
         printAscii(x++%4);
-        active = promptContinue();
+        cout << "To exit enter 'x', otherwise enter anything else to continue" << endl;
+        cin >> temp;
     }
+
     cout << "Thank you for viewing :)" << endl;
     return 0;
 }
@@ -45,20 +47,4 @@ void printAscii(int x)
 void printLogo()
 {
     cout << "logo" << endl;
-}
-
-bool promptContinue()
-{
-    while (true)
-    {
-        string temp;
-        cout << "To view the next slide enter \"n\". To exit enter \"x\"" << endl;
-        cin >> temp;
-        if (temp.compare("n") == 0)
-            return true;
-        else if (temp.compare("x") == 0)
-            return false;
-        else
-            cout << "Invalid entry." << endl;
-    }
 }
