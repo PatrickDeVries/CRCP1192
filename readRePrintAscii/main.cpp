@@ -14,7 +14,7 @@ int main()
     string fileName;
     cin >> fileName; //get file name/path from user
     fstream ifile(fileName); //open file
-    string ascii;
+    string ascii = " ";
     while (!ifile.eof()) //read until the end of the file
     {
         string temp = " "; //temp variable to store next line of art
@@ -24,9 +24,11 @@ int main()
     cout << ascii; //print the input art
     ifile.close(); //close input file
     int iter = 0; //iterator for ascii string
-    ofstream ofile("outputCode.txt"); //open output file
+    cout << "File name to print code to?" << endl;
+    cin >> fileName;
+    ofstream ofile(fileName); //open output file
     ofile << "cout << \"";
-    while (iter < ascii.length()) //print out every character in the ascii string
+    while (iter < ascii.length() -1) //print out every character in the ascii string
     {
         if (ascii[iter] == '\\') //if the character is a \ print two
         {
