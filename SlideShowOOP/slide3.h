@@ -2,7 +2,7 @@
 #define SLIDE3_H
 #include "slide.h"
 
-
+//inherets from Slide
 class slide3 :public Slide
 {
 public:

@@ -1,3 +1,9 @@
+/*Patrick DeVries
+ * 47381598
+ * CRCP 1192
+ * this program outputs ascii art in a repeating slide format using object oriented programming
+ * */
+
 #include <iostream>
 #include "slide.h"
 #include "slide1.h"
@@ -11,27 +17,27 @@ void printLogo();
 
 int main()
 {
-    Slide* slideArr[4] = {new Slide1, new slide2, new slide3, new slide4};
+    Slide* slideArr[4] = {new Slide1, new slide2, new slide3, new slide4}; //declare the slide array and set each slide equal to a new slide
 
-    string temp;
-    printLogo();
-    cout << "Welcome to the slide show! Enter anything to begin." << endl;
+    string temp; //string to read input into
+    printLogo(); //print the logo
+    cout << "Welcome to the slide show! Enter anything to begin." << endl; //prompt to begin
     cin >> temp;
     temp = " ";
-    int x = 0;
+    int x = 0; //counter for slides
 
-    while(temp.compare("x") != 0)
+    while(temp.compare("x") != 0) //until the user enters 'x'
     {
-        slideArr[x++%4]->printSlide();
+        slideArr[x++%4]->printSlide(); //print slide [x mod 4] and increment x after the call
         cout << "To exit enter 'x', otherwise enter anything else to continue" << endl;
         cin >> temp;
     }
 
-    cout << "All art is from https://asciiart.website/index.php?art=art%20and%20design/famous%20paintings\nThank you for viewing :)" << endl;
+    cout << "All art is from https://asciiart.website/index.php?art=art%20and%20design/famous%20paintings\nThank you for viewing :)" << endl; //print source
     return 0;
 }
 
-void printLogo()
+void printLogo() //function to print the logo
 {
     cout << " 		<C' `>   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$c CC>>;;, <C> CC,`CC>>'`'CCCCC\n";
     cout << "		' ;C>;> J$$$$$$$$$$$$$$$$$$$$$$$$$????????$$$.`C''''<><>', CC,.,;;C>'`<CCC\n";

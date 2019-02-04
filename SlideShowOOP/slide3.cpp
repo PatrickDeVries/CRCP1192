@@ -1,6 +1,6 @@
 #include "slide3.h"
 
-slide3::slide3()
+slide3::slide3() //empty constructor
 {
 
 }

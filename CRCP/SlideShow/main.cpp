@@ -1,3 +1,9 @@
+/*Patrick DeVries
+ * 47381598
+ * CRCP 1192
+ * this program outputs ascii art in a repeating slide format using procedural programming
+ * */
+
 #include <iostream>
 
 using namespace std;
@@ -6,27 +12,31 @@ void printLogo();
 
 int main()
 {
-    string temp;
-    printLogo();
-    cout << "Welcome to the slide show! Enter anything to begin." << endl;
+    string temp; //string to read input into
+    printLogo(); //print the logo
+    cout << "Welcome to the slide show! Enter anything to begin." << endl; //prompt to begin
     cin >> temp;
     temp = " ";
-    int x = 0;
+    int x = 0; //counter for slides
 
-    while(temp.compare("x") != 0)
+    while(temp.compare("x") != 0) //until the user enters 'x'
     {
-        printAscii(x++%4);
+        printAscii(x++%4); //call printAscii with input x mod 4 and increment x after the call
         cout << "To exit enter 'x', otherwise enter anything else to continue" << endl;
         cin >> temp;
     }
 
-    cout << "All art is from https://asciiart.website/index.php?art=art%20and%20design/famous%20paintings\nThank you for viewing :)" << endl;
+    cout << "All art is from https://asciiart.website/index.php?art=art%20and%20design/famous%20paintings\nThank you for viewing :)" << endl; //print credit
     return 0;
 }
 
+/**
+ * @brief printAscii function prints an ascii art depending on the input x
+ * @param x represents which slide to print
+ */
 void printAscii(int x)
 {
-    switch (x)
+    switch (x) //use a switch case statement to determine which slide will be printed
     {
     case 0:
         cout << "                                                                        ,;\n";
@@ -394,6 +404,9 @@ void printAscii(int x)
     }
 }
 
+/**
+ * @brief printLogo prints the logo
+ */
 void printLogo()
 {
     cout << " 		<C' `>   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$c CC>>;;, <C> CC,`CC>>'`'CCCCC\n";
