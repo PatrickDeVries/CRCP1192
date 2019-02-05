@@ -1,6 +1,6 @@
 /*Patrick DeVries
  * 47381598
- * CRCP 1192
+ * CRCP 3305
  * this program outputs ascii art in a repeating slide format using procedural programming
  * */
 
