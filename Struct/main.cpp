@@ -22,7 +22,7 @@ public:
     }
     int getID()
     {
-        reutnr id;
+        return id;
     }
     void setAge(int x)
     {
@@ -40,11 +40,13 @@ public:
     {
         return name;
     }
+
 };
 
 int main()
 {
     student Z;
+    Z.display();
     Z.setAge(26);
     Z.setID(007);
     Z.setName("Z");
