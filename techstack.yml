@@ -1,0 +1,37 @@
+repo_name: PatrickDeVries/CRCP1192
+report_id: a3b1a72b58d755ef9aa320ed25527714
+repo_type: Public
+timestamp: '2023-11-09T16:22:47+00:00'
+requested_by: PatrickDeVries
+provider: github
+branch: master
+detected_tools_count: 3
+tools:
+- name: C++
+  description: Has imperative, object-oriented and generic programming features, while
+    also providing the facilities for low level memory manipulation
+  website_url: http://www.cplusplus.com/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1049/cplusplus.png
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Qml
+  description: Qt, a leading cross-platform application and UI framework. With Qt,
+    you can develop applications once and deploy to leading desktop, embedded &amp;
+    mobile targets.
+  website_url: https://doc.qt.io/qt-5/qtqml-index.html
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/10735/hB7JEnDh_normal.jpg
+  detection_source: Repo Metadata
